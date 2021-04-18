@@ -2,6 +2,8 @@ import React,{useEffect,useState} from 'react';
 import HeaderEx from './headerEx';
 import {URL_API,doApiGet} from './apiSer';
 import InputEx from './inputEx';
+import SwapEx from './swapEX';
+import ScoreEx from './scoreEx';
 
 
 function ExchangeApp() {
@@ -62,6 +64,11 @@ function ExchangeApp() {
     setAmountInFromCurrency(false)
   }
 
+  function handleSwap(){
+    setFromCurrency(toCurrency);
+    setToCurrency(fromCurrency);
+}
+
   return (
     <>
       <h1>Convert</h1>
@@ -80,6 +87,19 @@ function ExchangeApp() {
         onChangeAmount={handleToAmountChange}
         amount={toAmount}
       />
+        <div className="col-sm d-flex justify-content-center">
+                <SwapEx
+                    swapOptions = {handleSwap}
+                />
+            </div>
+            <div>
+                <ScoreEx
+                selectedFromCurrency = {fromCurrency}
+                selectedToCurrency = {toCurrency}
+                fromFieldAmount = {fromAmount}
+                toFieldAmount = {toAmount}
+                />
+            </div>
     </>
   );
 }

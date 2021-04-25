@@ -10,9 +10,12 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;  
-  min-height: 100vh;
+  min-height: 600px;
   text-align: center;
-  background-image: url("./cover.jpg");
+  background-image: url("./cover2.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
 }
 .input {
   border: 1px solid #333;
@@ -24,7 +27,6 @@ body {
 main{
   min-height: 600px;
  
-  background-repeat: no-repeat;
 }
 @media only screen and (max-width: 500px){ 
   .md-h2{
@@ -36,6 +38,10 @@ main{
   }
 }
 
-.footerEx{
-  margin-right: 10px;
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
 }

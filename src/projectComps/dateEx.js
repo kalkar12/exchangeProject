@@ -18,8 +18,8 @@ function DateEx(props){
 
   return (
       <div>
-          <h4 style={{fontSize: "2em"}}>{time}</h4>
-          <h4 style={{fontSize: "2em"}}>{date}</h4>
+          <h4 className="d-inline" style={{fontSize: "2em"}}>{time}&nbsp;-&nbsp;</h4>
+          <h4 className="d-inline" style={{fontSize: "2em"}}>{date}</h4>
       </div>
   )
 }

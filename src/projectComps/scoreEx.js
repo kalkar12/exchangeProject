@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import DateEx from './dateEx';
 
 function ScoreEx(props){
     const{
@@ -16,9 +15,7 @@ function ScoreEx(props){
         <img src="arrow-64.png" alt="arrows"/>{'\u00A0'}{'\u00A0'}
         {parseFloat(toFieldAmount).toFixed(2)} {selectedToCurrency.substring('USD'.length)}
     </h4>
-    <div className="d-flex justify-content-center pt-5 text-muted">
-        <DateEx/>
-    </div>
+   
     
 </div>
 
